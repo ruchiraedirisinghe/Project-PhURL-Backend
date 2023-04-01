@@ -20,7 +20,7 @@ import os.path
 from urllib.parse import urlparse
 
 # Load model
-model = joblib.load('lgb_model.joblib')
+model = joblib.load('phishingweb/lgb_model.joblib')
 
 
 # Define feature extraction functions
@@ -301,19 +301,3 @@ def get_prediction_from_url(test_url):
     return res, prob_str
 
 
-
-
-# Take user input
-
-url = input("Enter URL: ")
-
-# Check if url starts with https://
-if url.startswith('https://'):
-    # Remove https:// from url
-    url = url.replace('https://', '')
-
-# Get prediction from url
-result, prob = get_prediction_from_url(url)
-
-print("Result:", result)
-print("Probability:", prob)
