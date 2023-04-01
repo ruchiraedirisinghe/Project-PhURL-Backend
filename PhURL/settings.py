@@ -1,3 +1,4 @@
+# A comment.
 """
 Django settings for PhURL project.
 

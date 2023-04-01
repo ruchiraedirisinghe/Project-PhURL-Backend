@@ -1,6 +1,14 @@
-from django.shortcuts import render
+"""
+    It takes the url from the request, removes the https:// from the url if it exists, and then passes
+    the url to the get_prediction_from_url function. The result and probability are then returned in the
+    response
+    
+    :param request: The request object contains all the information about the request that was made to
+    the server
+    :return: The result and probability of the prediction.
+"""
 
-# Create your views here.
+# from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 

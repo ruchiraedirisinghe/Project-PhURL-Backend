@@ -255,7 +255,7 @@ def main(url):
     extract_features.append(letter_count(url))
     extract_features.append(fd_length(url))
     tld = get_tld(url,fail_silently=True)
-      
+    
     extract_features.append(tld_length(tld))
     
     return extract_features
